@@ -57,16 +57,16 @@ Teams:
 | ReadWrite | Script  | Current  | Member    | `200`           |               |
 | ReadWrite | Script  | Current  | NotMember | `404`           |               |
 | ReadWrite | Script  | Legacy   | Member    | `200`           |               |
-| ReadWrite | Script  | Legacy   | NotMember | `404`           |               |
-| Workflow  | Actions | Current  | Member    | `200`           |               |
-| Workflow  | Actions | Current  | NotMember | `404`           |               |
-| Workflow  | Actions | Legacy   | Member    | `200`           |               |
-| Workflow  | Actions | Legacy   | NotMember | `404`           |               |
-| Workflow  | Octokit | Current  | Member    | `200`           |               |
-| Workflow  | Octokit | Current  | NotMember | `404`           |               |
-| Workflow  | Octokit | Legacy   | Member    | `200`           |               |
-| Workflow  | Octokit | Legacy   | NotMember | `404`           |               |
-| Workflow  | Script  | Current  | Member    | `200`           |               |
+| ReadWrite | Script  | Legacy   | NotMember | `404`           | `404`         |
+| Workflow  | Actions | Current  | Member    | `404`           | `404`         |
+| Workflow  | Actions | Current  | NotMember | `404`           | `404`         |
+| Workflow  | Actions | Legacy   | Member    | `404`           | `404`         |
+| Workflow  | Actions | Legacy   | NotMember | `404`           | `404`         |
+| Workflow  | Octokit | Current  | Member    | `404`           | `404`         |
+| Workflow  | Octokit | Current  | NotMember | `404`           | `404`         |
+| Workflow  | Octokit | Legacy   | Member    | `404`           | `404`         |
+| Workflow  | Octokit | Legacy   | NotMember | `404`           | `404`         |
+| Workflow  | Script  | Current  | Member    | `404`           |               |
 | Workflow  | Script  | Current  | NotMember | `404`           |               |
-| Workflow  | Script  | Legacy   | Member    | `200`           |               |
+| Workflow  | Script  | Legacy   | Member    | `404`           |               |
 | Workflow  | Script  | Legacy   | NotMember | `404`           |               |

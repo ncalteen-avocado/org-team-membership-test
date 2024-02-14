@@ -54,4 +54,34 @@ export async function run() {
       }
     }
   }
+
+  // Also test the builtin `getMembershipForUserInOrg` method.
+  for (const [clientName, client] of Object.entries(clients)) {
+    for (const [teamName, team] of Object.entries(teams)) {
+      try {
+        await client.rest.teams.getMembershipForUserInOrg({
+          org: "ncalteen-avocado",
+          team_slug: team,
+          username: "ncalteen",
+        });
+
+        core.info(
+          `| ${tokenName} | ${clientName} | Builtin | ${teamName} | ${
+            teamName === "Member" ? "`200`" : "`404`"
+          } | \`200\` |`
+        );
+      } catch (error: any) {
+        if (error.status === 404) {
+          core.info(
+            `| ${tokenName} | ${clientName} | Builtin | ${teamName} | ${
+              teamName === "Member" ? "`200`" : "`404`"
+            } | \`404\` |`
+          );
+        } else {
+          core.error(JSON.stringify(error));
+          throw error;
+        }
+      }
+    }
+  }
 }
