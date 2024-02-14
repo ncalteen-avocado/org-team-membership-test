@@ -13,7 +13,7 @@ jobs:
         id: token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: ${{ secrets.READ_ONLY_APP_ID }}
+          app-id: ${{ vars.READ_ONLY_APP_ID }}
           private-key: ${{ secrets.READ_ONLY_APP_PEM_FILE }}
           owner: ${{ github.repository_owner }}
 
@@ -34,7 +34,7 @@ jobs:
         id: token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: ${{ secrets.READ_WRITE_APP_ID }}
+          app-id: ${{ vars.READ_WRITE_APP_ID }}
           private-key: ${{ secrets.READ_WRITE_APP_PEM_FILE }}
           owner: ${{ github.repository_owner }}
 
