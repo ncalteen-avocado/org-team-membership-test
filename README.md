@@ -34,74 +34,26 @@ Teams:
 
 | Token     | Client  | Endpoint | Team      | Expected Result | Actual Result |
 | --------- | ------- | -------- | --------- | --------------- | ------------- |
-| Read      | Actions | Current  | Member    | `200`           |               |
-| Read      | Actions | Current  | NotMember | `404`           |               |
-| Read      | Actions | Legacy   | Member    | `200`           |               |
-| Read      | Actions | Legacy   | NotMember | `404`           |               |
-| Read      | Actions | Current  | Member    | `200`           |               |
-| Read      | Actions | Current  | NotMember | `404`           |               |
-| Read      | Actions | Legacy   | Member    | `200`           |               |
-| Read      | Actions | Legacy   | NotMember | `404`           |               |
-| Read      | Actions | Current  | Member    | `200`           |               |
-| Read      | Actions | Current  | NotMember | `404`           |               |
-| Read      | Actions | Legacy   | Member    | `200`           |               |
-| Read      | Actions | Legacy   | NotMember | `404`           |               |
-| Read      | Octokit | Current  | Member    | `200`           |               |
-| Read      | Octokit | Current  | NotMember | `404`           |               |
-| Read      | Octokit | Legacy   | Member    | `200`           |               |
-| Read      | Octokit | Legacy   | NotMember | `404`           |               |
-| Read      | Octokit | Current  | Member    | `200`           |               |
-| Read      | Octokit | Current  | NotMember | `404`           |               |
-| Read      | Octokit | Legacy   | Member    | `200`           |               |
-| Read      | Octokit | Legacy   | NotMember | `404`           |               |
-| Read      | Octokit | Current  | Member    | `200`           |               |
-| Read      | Octokit | Current  | NotMember | `404`           |               |
-| Read      | Octokit | Legacy   | Member    | `200`           |               |
-| Read      | Octokit | Legacy   | NotMember | `404`           |               |
+| Read      | Actions | Current  | Member    | `200`           | `200`         |
+| Read      | Actions | Current  | NotMember | `404`           | `404`         |
+| Read      | Actions | Legacy   | Member    | `200`           | `404` (:x:)   |
+| Read      | Actions | Legacy   | NotMember | `404`           | `404`         |
+| Read      | Octokit | Current  | Member    | `200`           | `200`         |
+| Read      | Octokit | Current  | NotMember | `404`           | `404`         |
+| Read      | Octokit | Legacy   | Member    | `200`           | `404` (:x:)   |
+| Read      | Octokit | Legacy   | NotMember | `404`           | `404`         |
 | Read      | Script  | Current  | Member    | `200`           |               |
 | Read      | Script  | Current  | NotMember | `404`           |               |
 | Read      | Script  | Legacy   | Member    | `200`           |               |
 | Read      | Script  | Legacy   | NotMember | `404`           |               |
-| Read      | Script  | Current  | Member    | `200`           |               |
-| Read      | Script  | Current  | NotMember | `404`           |               |
-| Read      | Script  | Legacy   | Member    | `200`           |               |
-| Read      | Script  | Legacy   | NotMember | `404`           |               |
-| Read      | Script  | Current  | Member    | `200`           |               |
-| Read      | Script  | Current  | NotMember | `404`           |               |
-| Read      | Script  | Legacy   | Member    | `200`           |               |
-| Read      | Script  | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Actions | Current  | Member    | `200`           |               |
-| ReadWrite | Actions | Current  | NotMember | `404`           |               |
-| ReadWrite | Actions | Legacy   | Member    | `200`           |               |
-| ReadWrite | Actions | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Actions | Current  | Member    | `200`           |               |
-| ReadWrite | Actions | Current  | NotMember | `404`           |               |
-| ReadWrite | Actions | Legacy   | Member    | `200`           |               |
-| ReadWrite | Actions | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Actions | Current  | Member    | `200`           |               |
-| ReadWrite | Actions | Current  | NotMember | `404`           |               |
-| ReadWrite | Actions | Legacy   | Member    | `200`           |               |
-| ReadWrite | Actions | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Octokit | Current  | Member    | `200`           |               |
-| ReadWrite | Octokit | Current  | NotMember | `404`           |               |
-| ReadWrite | Octokit | Legacy   | Member    | `200`           |               |
-| ReadWrite | Octokit | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Octokit | Current  | Member    | `200`           |               |
-| ReadWrite | Octokit | Current  | NotMember | `404`           |               |
-| ReadWrite | Octokit | Legacy   | Member    | `200`           |               |
-| ReadWrite | Octokit | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Octokit | Current  | Member    | `200`           |               |
-| ReadWrite | Octokit | Current  | NotMember | `404`           |               |
-| ReadWrite | Octokit | Legacy   | Member    | `200`           |               |
-| ReadWrite | Octokit | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Script  | Current  | Member    | `200`           |               |
-| ReadWrite | Script  | Current  | NotMember | `404`           |               |
-| ReadWrite | Script  | Legacy   | Member    | `200`           |               |
-| ReadWrite | Script  | Legacy   | NotMember | `404`           |               |
-| ReadWrite | Script  | Current  | Member    | `200`           |               |
-| ReadWrite | Script  | Current  | NotMember | `404`           |               |
-| ReadWrite | Script  | Legacy   | Member    | `200`           |               |
-| ReadWrite | Script  | Legacy   | NotMember | `404`           |               |
+| ReadWrite | Actions | Current  | Member    | `200`           | `200`         |
+| ReadWrite | Actions | Current  | NotMember | `404`           | `404`         |
+| ReadWrite | Actions | Legacy   | Member    | `200`           | `404` (:x:)   |
+| ReadWrite | Actions | Legacy   | NotMember | `404`           | `404`         |
+| ReadWrite | Octokit | Current  | Member    | `200`           | `200`         |
+| ReadWrite | Octokit | Current  | NotMember | `404`           | `404`         |
+| ReadWrite | Octokit | Legacy   | Member    | `200`           | `404` (:x:)   |
+| ReadWrite | Octokit | Legacy   | NotMember | `404`           | `404`         |
 | ReadWrite | Script  | Current  | Member    | `200`           |               |
 | ReadWrite | Script  | Current  | NotMember | `404`           |               |
 | ReadWrite | Script  | Legacy   | Member    | `200`           |               |
@@ -110,34 +62,10 @@ Teams:
 | Workflow  | Actions | Current  | NotMember | `404`           |               |
 | Workflow  | Actions | Legacy   | Member    | `200`           |               |
 | Workflow  | Actions | Legacy   | NotMember | `404`           |               |
-| Workflow  | Actions | Current  | Member    | `200`           |               |
-| Workflow  | Actions | Current  | NotMember | `404`           |               |
-| Workflow  | Actions | Legacy   | Member    | `200`           |               |
-| Workflow  | Actions | Legacy   | NotMember | `404`           |               |
-| Workflow  | Actions | Current  | Member    | `200`           |               |
-| Workflow  | Actions | Current  | NotMember | `404`           |               |
-| Workflow  | Actions | Legacy   | Member    | `200`           |               |
-| Workflow  | Actions | Legacy   | NotMember | `404`           |               |
 | Workflow  | Octokit | Current  | Member    | `200`           |               |
 | Workflow  | Octokit | Current  | NotMember | `404`           |               |
 | Workflow  | Octokit | Legacy   | Member    | `200`           |               |
 | Workflow  | Octokit | Legacy   | NotMember | `404`           |               |
-| Workflow  | Octokit | Current  | Member    | `200`           |               |
-| Workflow  | Octokit | Current  | NotMember | `404`           |               |
-| Workflow  | Octokit | Legacy   | Member    | `200`           |               |
-| Workflow  | Octokit | Legacy   | NotMember | `404`           |               |
-| Workflow  | Octokit | Current  | Member    | `200`           |               |
-| Workflow  | Octokit | Current  | NotMember | `404`           |               |
-| Workflow  | Octokit | Legacy   | Member    | `200`           |               |
-| Workflow  | Octokit | Legacy   | NotMember | `404`           |               |
-| Workflow  | Script  | Current  | Member    | `200`           |               |
-| Workflow  | Script  | Current  | NotMember | `404`           |               |
-| Workflow  | Script  | Legacy   | Member    | `200`           |               |
-| Workflow  | Script  | Legacy   | NotMember | `404`           |               |
-| Workflow  | Script  | Current  | Member    | `200`           |               |
-| Workflow  | Script  | Current  | NotMember | `404`           |               |
-| Workflow  | Script  | Legacy   | Member    | `200`           |               |
-| Workflow  | Script  | Legacy   | NotMember | `404`           |               |
 | Workflow  | Script  | Current  | Member    | `200`           |               |
 | Workflow  | Script  | Current  | NotMember | `404`           |               |
 | Workflow  | Script  | Legacy   | Member    | `200`           |               |

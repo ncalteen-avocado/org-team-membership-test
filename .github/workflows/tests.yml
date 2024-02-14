@@ -21,7 +21,6 @@ jobs:
         id: team-membership
         uses: ncalteen-avocado/org-team-membership-test@main
         with:
-          app_name: Read
           token_name: Read
           token: ${{ steps.token.outputs.token }}
 
@@ -42,6 +41,17 @@ jobs:
         id: team-membership
         uses: ncalteen-avocado/org-team-membership-test@main
         with:
-          app_name: Read
-          token_name: Read
+          token_name: ReadWrite
           token: ${{ steps.token.outputs.token }}
+
+  workflow:
+    name: Workflow Token
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get Team Membership
+        id: team-membership
+        uses: ncalteen-avocado/org-team-membership-test@main
+        with:
+          token_name: Workflow
+          token: ${{ secrets.GITHUB_TOKEN }}
