@@ -28,27 +28,26 @@ export async function run() {
     for (const [endpointName, endpoint] of Object.entries(endpoints)) {
       for (const [teamName, team] of Object.entries(teams)) {
         try {
-          const response = await client.request(`GET ${endpoint}`, {
+          await client.request(`GET ${endpoint}`, {
             org: "ncalteen-avocado",
             team_slug: team,
             username: "ncalteen",
           });
 
-          core.info(JSON.stringify(response));
           core.info(
             `| ${tokenName} | ${clientName} | ${endpointName} | ${teamName} | ${
-              teamName === "Member" ? `200` : `404`
+              teamName === "Member" ? "`200`" : "`404`"
             } | \`200\` |`
           );
         } catch (error: any) {
-          core.error(JSON.stringify(error));
           if (error.status === 404) {
             core.info(
               `| ${tokenName} | ${clientName} | ${endpointName} | ${teamName} | ${
-                teamName === "Member" ? `200` : `404`
+                teamName === "Member" ? "`200`" : "`404`"
               } | \`404\` |`
             );
           } else {
+            core.error(JSON.stringify(error));
             throw error;
           }
         }
